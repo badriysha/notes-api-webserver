@@ -53,8 +53,8 @@ const getNoteByIdHandler = (request, h) => {
          status: 'success',
          data: {
             note,
-         }
-      }
+         },
+      };
    }
 
    const response = h.response({
@@ -63,7 +63,7 @@ const getNoteByIdHandler = (request, h) => {
    });
    response.code(404);
    return response;
-}
+};
 
 const editNoteByIdHandler = (request, h) => {
    const { id } = request.params;
@@ -81,7 +81,7 @@ const editNoteByIdHandler = (request, h) => {
          tags,
          body,
          updatedAt,
-      }
+      };
 
       const response = h.response({
          status: 'success',
@@ -97,7 +97,7 @@ const editNoteByIdHandler = (request, h) => {
    });
    response.code(404);
    return response;
-}
+};
 
 const deleteNoteByIdHandler = (request, h) => {
    const { id } = request.params;
@@ -119,7 +119,7 @@ const deleteNoteByIdHandler = (request, h) => {
    });
    response.code(404);
    return response;
-}
+};
 
 module.exports = {
    addNoteHandler,
